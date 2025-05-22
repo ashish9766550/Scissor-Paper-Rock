@@ -45,6 +45,8 @@ function playgame(playerchoice) {
       resultdisplay.textContent = "";
       (resultdisplay.classList.remove = "greentext"), "redtext";
       playerdisplay.textContent = "Player:";
+      playerscore.textContent="";
+      computerscore.textContent="";
 
     });
   };
