@@ -3,10 +3,10 @@ const computerdisplay = document.getElementById("computerdisplay");
 const playerdisplay = document.getElementById("playerdisplay");
 const resultdisplay = document.getElementById("resultdisplay");
 const button = document.querySelector(".btn");
-const playerscore=document.getElementById("playerscore");
-const computerscore=document.getElementById("computerscore");
-let playerscores=0;
-let computerscores=0;
+const playerscore = document.getElementById("playerscore");
+const computerscore = document.getElementById("computerscore");
+let playerscores = 0;
+let computerscores = 0;
 function playgame(playerchoice) {
   const computerchoice = choices[Math.floor(Math.random() * choices.length)];
   let result = "";
@@ -32,22 +32,21 @@ function playgame(playerchoice) {
     switch (result) {
       case "YOU WIN":
         resultdisplay.classList.add("greentext");
-        playerscores++
-        playerscore.textContent=playerscores
+        playerscores++;
+        playerscore.textContent = playerscores;
         break;
       case "YOU LOSE":
         resultdisplay.classList.add("redtext");
-          computerscores++
-        computerscore.textContent=computerscores;
+        computerscores++;
+        computerscore.textContent = computerscores;
         break;
     }
     button.addEventListener("click", () => {
       resultdisplay.textContent = "";
       (resultdisplay.classList.remove = "greentext"), "redtext";
       playerdisplay.textContent = "Player:";
-      playerscore.textContent="";
-      computerscore.textContent="";
-
+      playerscore.textContent = "";
+      computerscore.textContent = "";
     });
-  };
-};
+  }
+}
